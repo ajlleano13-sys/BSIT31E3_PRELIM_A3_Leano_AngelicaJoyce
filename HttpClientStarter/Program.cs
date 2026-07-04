@@ -10,6 +10,8 @@ var response = await client.PostAsync("https://localhost:7163/weatherforecast", 
 
 // ✅ Show response details
 
+while (true)
+{
 Console.WriteLine("\nSelect Actions:");
 Console.WriteLine("A - GET");
 Console.WriteLine("B - POST");
@@ -50,6 +52,4 @@ Console.WriteLine($"Is Success: {response.IsSuccessStatusCode}");
 var body = await response.Content.ReadAsStringAsync();
 
 Console.WriteLine($"\nBody:\n{ body}");
-
-
-Console.ReadLine();
+}
